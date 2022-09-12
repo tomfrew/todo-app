@@ -10,14 +10,13 @@ model Todo {
         update setCompletion(id) with (complete)
         update updateTodo(id) with (title, description)
         list todos()
-        list todosByStatus(complete)
     }
 }
 
 api Web {
     @graphql
+
     models {
         Todo
     }
 }
-
