@@ -1,15 +1,16 @@
 model Todo {
     fields {
-        complete Boolean @default(false)
+        complete Boolean
         title Text
         description Text?
     }
 
     operations {
-        create createTodo() with (title)
+        create createTodo() with (title, complete)
         update setCompletion(id) with (complete)
         update updateTodo(id) with (title, description)
-        list listTodos(complete)
+        list todos()
+        list todosByStatus(complete)
     }
 }
 
