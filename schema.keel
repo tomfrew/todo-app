@@ -3,6 +3,7 @@ model Todo {
         complete Boolean
         title Text
         description Text?
+        author Text?
     }
 
     operations {
